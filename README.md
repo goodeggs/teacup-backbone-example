@@ -18,7 +18,7 @@ You only need to have node installed. Everything else is installed as described 
 ### Install
 
 ```
-git clone git@github.com:goodeggs/teacup-backbone-example.gi
+git clone git@github.com:goodeggs/teacup-backbone-example.git
 cd teacup-backbone-example
 npm install
 ```
@@ -46,3 +46,10 @@ If you want to see changes to files without having to restart your server, start
 npm install -g node-dev
 node-dev server.coffee
 ```
+
+The Examples
+------------
+
+The Backbone app itself is in `public/javascripts/app` and is loaded by the entrypoint `public/javascripts/app.coffee`.
+
+Tests are in `public/javascripts/test`.
