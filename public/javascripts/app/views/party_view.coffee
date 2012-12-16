@@ -10,7 +10,7 @@ template = renderable ({kids}) ->
       for kid in kids
         li kid.get 'name'
 
-class app.AppView extends Backbone.View
+class app.PartyView extends Backbone.View
   className: 'app-view'
 
   constructor: ({@kids}) ->
