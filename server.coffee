@@ -23,8 +23,8 @@ app.configure ->
 app.configure 'development', ->
   app.use express.errorHandler()
 
-app.get '/', (req, res) ->
-  res.render 'index'
+app.get '/', (req, res) -> res.render 'index'
+app.get '/test', (req, res) -> res.render 'test'
 
 
 http.createServer(app).listen app.get('port'), ->

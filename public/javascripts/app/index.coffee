@@ -3,13 +3,5 @@
 #= require ../vendor/backbone
 #= require ../vendor/teacup
 
-#= require views/party_view
-#= require models/kid
-
-{Kid, PartyView} = window.app
-
-$ ->
-  kids = (new Kid(name: name) for name in [ 'Noah', 'Mary Kate', 'Henry Hugo', 'Hazel', 'Mia', 'Kira' ])
-  view = new PartyView({kids})
-  view.render().$el.appendTo '#app'
-  view.focusInput()
+#= require_tree views
+#= require_tree models

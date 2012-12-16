@@ -4,7 +4,7 @@ module.exports = renderable ({}) ->
   html ->
     head ->
       title 'Backbone Teacup'
-      js 'app/index'
+      js 'app'
       css 'app'
     body ->
       div '#app'
