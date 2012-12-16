@@ -1,5 +1,3 @@
-window.app ?= {}
-
 {renderable, div, h1, ul, li, p, form, input } = teacup
 
 template = renderable ({kids}) ->
@@ -12,7 +10,7 @@ template = renderable ({kids}) ->
     form ->
       input placeholder: 'Add another'
 
-class app.PartyView extends Backbone.View
+class PartyView extends Backbone.View
   className: 'app-view'
 
   events:
@@ -20,14 +18,22 @@ class app.PartyView extends Backbone.View
 
   constructor: ({kids}) ->
     @kids = new Backbone.Collection kids
+    super()
 
   initialize: ->
-    @kids.on 'change', @$el.html @render
+    @listenTo @kids, 'all', @render
 
   render: ->
-    template({@kids})
+    @$el.html template({@kids})
+    @focusInput()
+    @
+
+  focusInput: ->
+    @$('form input').focus()
 
   addKid: (e) ->
-    $(e).preventDefault()
+    e.preventDefault()
     @kids.push new app.Kid name: name unless _(name = @$('form input').val()).isEmpty()
-    console.log @kids.toJSON()
+
+window.app ?= {}
+window.app.PartyView = PartyView

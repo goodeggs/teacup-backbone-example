@@ -1,3 +1,5 @@
-window.app ?= {}
+class Kid extends Backbone.Model
 
-class app.Kid extends Backbone.Model
+
+window.app ?= {}
+window.app.Kid = Kid

@@ -10,4 +10,6 @@
 
 $ ->
   kids = (new Kid(name: name) for name in [ 'Noah', 'Mary Kate', 'Henry Hugo', 'Hazel', 'Mia', 'Kira' ])
-  $('#app').html new PartyView({kids}).render()
+  view = new PartyView({kids})
+  view.render().$el.appendTo '#app'
+  view.focusInput()
