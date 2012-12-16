@@ -9,5 +9,5 @@
 {Kid, PartyView} = window.app
 
 $ ->
-  kids = (new Kid(name: name) for name in [ 'Noah', 'Henry Hugo', 'Hazel', 'Mia', 'Kira' ])
+  kids = (new Kid(name: name) for name in [ 'Noah', 'Mary Kate', 'Henry Hugo', 'Hazel', 'Mia', 'Kira' ])
   $('#app').html new PartyView({kids}).render()
