@@ -15,7 +15,7 @@ describe 'PartyView', ->
       view.$('form input').val('New Name')
       view.$('form').submit()
       expect(view.$('li').length).to.be 7
-      
+
     it 'does not add empty name', ->
       view.$('form input').val('')
       view.$('form').submit()
