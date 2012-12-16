@@ -1,10 +1,10 @@
-#= require vendor/jquery.min
-#= require vendor/underscore
-#= require vendor/backbone
-#= require vendor/teacup
+#= require ../vendor/jquery.min
+#= require ../vendor/underscore
+#= require ../vendor/backbone
+#= require ../vendor/teacup
 
-#= require app/views/party_view
-#= require app/models/kid
+#= require views/party_view
+#= require models/kid
 
 {Kid, PartyView} = window.app
 
