@@ -4,6 +4,6 @@ module.exports = renderable ({}) ->
   html ->
     head ->
       title 'Backbone Teacup'
-      js 'app', pathOnly: true
+      js 'app'
     body ->
-      div '#app', 'hi'
+      div '#app'
