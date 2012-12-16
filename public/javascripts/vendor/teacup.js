@@ -1,0 +1,1 @@
+<html><body>You are being <a href="https://raw.github.com/goodeggs/teacup/master/lib/teacup.js">redirected</a>.</body></html>
