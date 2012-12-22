@@ -10,6 +10,7 @@
     "coffee-script": "*",
     "stylus": "*",
     "connect-assets": "*",
-    "teacup": "*"
+    "teacup": "git://github.com/goodeggs/teacup.git#master"
+
   }
 }

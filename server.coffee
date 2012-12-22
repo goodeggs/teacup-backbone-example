@@ -1,7 +1,6 @@
 express = require 'express'
 http = require 'http'
 path = require 'path'
-connectAssets = require './lib/teacup_connect-assets'
 
 app = express()
 
@@ -13,7 +12,7 @@ app.configure ->
   app.engine "coffee", require('teacup/lib/express').renderFile
   app.use express.favicon()
   app.use express.logger 'dev'
-  app.use connectAssets(src: 'public', jsDir: 'javascripts', cssDir: 'stylesheets')
+  app.use require('teacup/lib/connect-assets')(src: 'public', jsDir: 'javascripts', cssDir: 'stylesheets')
   app.use express.bodyParser()
   app.use express.methodOverride()
   app.use app.router
@@ -25,6 +24,9 @@ app.configure 'development', ->
 
 app.get '/', (req, res) -> res.render 'index'
 app.get '/test', (req, res) -> res.render 'test'
+
+app.get '/kids/:id', (req, res) ->
+  res.send name: 'Server Kid', createdAt: new Date()
 
 
 http.createServer(app).listen app.get('port'), ->
